@@ -1,281 +1,357 @@
-# Normative-Microbial-Network-Modeling-Framework
-::: {align="center"}
+<div align="center">
+
 # Healthy-Reference Microbial Network Modeling Framework
 
 ### A normative modeling framework for characterizing ecological deviations in microbiome networks
 
-```{=html}
-<p>
+<br>
+
+**Developed by MiniLab**
+
+South China University of Technology
+
+<br>
+
+![Microbiome](https://img.shields.io/badge/Field-Microbiome%20Ecology-blue)
+![Network](https://img.shields.io/badge/Method-Normative%20Network%20Modeling-green)
+![Analysis](https://img.shields.io/badge/Workflow-Reproducible-orange)
+
+</div>
+
+
+---
+
+# Overview
+
+Microbial communities are highly organized ecological systems composed of interacting microorganisms rather than independent collections of individual taxa. Although conventional microbiome studies have successfully identified disease-associated microbial signatures, these approaches mainly focus on abundance changes and may overlook alterations in microbial interactions, community organization, and ecological stability.
+
+The **Healthy-Reference Microbial Network Modeling Framework** was developed to characterize microbiome alterations from an ecosystem-level perspective. Instead of defining disease-associated changes solely through microbial abundance differences, this framework establishes a microbial ecological network derived from healthy populations and evaluates how microbial communities deviate from this reference organization under different biological conditions.
+
+The framework follows the concept of **normative modeling**, where the ecological structure observed in healthy populations is considered a reference state. Disease-associated microbiomes are subsequently compared against this reference network to quantify deviations in microbial connectivity, module organization, and ecological relationships.
+
+By integrating microbial network construction, community structure analysis, preservation evaluation, and phenotype association, this framework provides a systematic approach for studying microbiome ecosystem alterations across complex diseases.
+
+
+---
+
+# Scientific Concept
+
+The central idea of this framework is that disease-associated microbiome alterations may not simply represent the appearance or disappearance of individual microbial members, but rather reflect changes in the organization and stability of the entire microbial ecosystem.
+
+The analytical strategy can be summarized as:
+
 ```
-`<img src="https://img.shields.io/badge/Platform-MiniLab-blue">`{=html}
-`<img src="https://img.shields.io/badge/Language-R%20%7C%20Python-green">`{=html}
-`<img src="https://img.shields.io/badge/Domain-Microbiome%20Ecology-orange">`{=html}
-`<img src="https://img.shields.io/badge/Reproducible-Workflow-red">`{=html}
-```{=html}
-</p>
+Healthy microbial population
+
+          ↓
+
+Construction of healthy-reference ecological network
+
+          ↓
+
+Identification of microbial communities and network organization
+
+          ↓
+
+Projection of disease-associated microbiomes
+
+          ↓
+
+Quantification of ecological deviations
+
+          ↓
+
+Association with biological phenotypes
 ```
-:::
 
-------------------------------------------------------------------------
+Rather than asking:
 
-## Overview
+> Which microbial taxa are different between healthy and disease states?
 
-The **Healthy-Reference Microbial Network Modeling Framework** provides
-a reproducible computational strategy for studying microbiome
-alterations from an ecological systems perspective.
+the framework focuses on:
 
-Traditional microbiome analyses mainly identify individual taxa or
-pathways associated with disease. However, microbial communities
-function as interconnected ecosystems, where biological properties
-emerge from complex interactions among microbial members.
+> How does the structure and organization of the microbial ecosystem deviate from a healthy reference state?
 
-This framework adopts a **healthy-reference normative modeling
-strategy**. A microbial ecological network is first constructed from
-healthy individuals as a reference state. Disease-associated microbiomes
-are then projected onto this reference architecture to quantify
-deviations in ecological organization.
 
-The framework was developed by **MiniLab** for investigating microbiome
-ecosystem alterations in complex diseases, with an initial application
-in psychiatric disorders.
+This perspective allows microbiome alterations to be interpreted from an ecological systems perspective and provides a quantitative approach for investigating microbial community instability, resilience, and disease-associated reorganization.
 
-------------------------------------------------------------------------
 
-## Scientific Concept
+---
 
-    Healthy microbial ecosystem
+# Framework Description
 
-              ↓
 
-    Reference ecological network
+## Healthy-reference microbial network construction
 
-              ↓
+The first component of the framework is the establishment of a microbial ecological reference network based on healthy individuals.
 
-    Disease-associated microbiome projection
+Microbial abundance profiles from healthy populations are processed and transformed into a suitable representation for network inference. Microbial associations are subsequently estimated to construct an ecological interaction network that represents the organization of a relatively stable microbial community.
 
-              ↓
+This reference network captures the relationships among microbial members, including microbial connectivity patterns, community structure, and ecological modules.
 
-    Network preservation evaluation
+The generated reference network serves as the baseline against which disease-associated microbiome alterations can be evaluated.
 
-              ↓
 
-    Ecological deviation quantification
+---
 
-              ↓
+## Microbial community and module identification
 
-    Clinical phenotype interpretation
+Microbial ecosystems are not randomly organized. Instead, groups of microorganisms with similar ecological relationships often form interconnected communities or modules.
 
-The central question addressed by this framework is:
+This framework identifies microbial modules within the healthy-reference network and characterizes their structural properties.
 
-> Rather than asking "which microbes are different?", we ask "how does
-> the organization of the microbial ecosystem deviate from a healthy
-> reference state?"
+Module-based analysis enables investigation of whether disease-associated alterations affect:
 
-------------------------------------------------------------------------
+- the entire microbial ecosystem;
+- specific ecological communities;
+- internal module connectivity;
+- interactions between different microbial communities.
 
-# Framework Components
+This approach provides a higher-level interpretation of microbiome alterations beyond individual microbial biomarkers.
 
-## 1. Healthy-reference network construction
 
-Microbial abundance profiles from healthy populations are used to
-establish a reference ecological network.
+---
 
-Main procedures:
+## Network preservation and ecological deviation analysis
 
--   Microbial abundance preprocessing
--   Compositional data transformation
--   Microbial association inference
--   Network topology characterization
--   Community/module detection
+After constructing the healthy-reference network, microbiome profiles from different biological states can be projected onto the reference ecological structure.
 
-Outputs:
+The framework evaluates the degree to which microbial relationships observed in healthy populations are preserved or disrupted.
 
--   Reference microbial network
--   Microbial interaction landscape
--   Ecological modules
+Network deviation analysis includes evaluation of:
 
-------------------------------------------------------------------------
+- microbial connection preservation;
+- loss of ecological relationships;
+- changes in module connectivity;
+- alterations in network organization.
 
-## 2. Normative network deviation analysis
+These measurements provide quantitative indicators of how microbial ecosystems depart from a healthy reference state.
 
-Disease states are evaluated by comparing their microbial organization
-with the healthy reference network.
 
-Implemented analyses include:
+---
 
--   Edge preservation analysis
--   Connection loss assessment
--   Network structural alteration
--   Intra-module connectivity changes
--   Inter-module communication disruption
+## Integration with biological and clinical phenotypes
 
-------------------------------------------------------------------------
+Microbial ecological deviations can be further integrated with biological information, including clinical phenotypes, disease characteristics, and multi-omics measurements.
 
-## 3. Module-based ecological interpretation
+The framework supports downstream analyses investigating whether specific network alterations are associated with:
 
-Microbial communities are organized into ecological modules.
+- disease severity;
+- clinical heterogeneity;
+- biological subtypes;
+- potential mechanistic processes.
 
-The framework evaluates whether disease-associated alterations
-represent:
+Such integration provides opportunities for connecting microbial ecosystem changes with host phenotypes.
 
--   Global ecosystem destabilization
--   Selective module vulnerability
--   Altered microbial cooperation
--   Loss of ecological connectivity
 
-------------------------------------------------------------------------
+---
 
-# Analysis Workflow
+# Computational Workflow
 
-    Raw microbiome abundance data
+The overall workflow consists of several major analytical steps:
 
-                ↓
+```
+Microbial abundance profiles
 
-    Quality control and preprocessing
+            ↓
 
-                ↓
+Data preprocessing and quality control
 
-    Healthy-reference network inference
+            ↓
 
-                ↓
+Healthy-reference network construction
 
-    Module identification
+            ↓
 
-                ↓
+Network topology characterization
 
-    Disease cohort projection
+            ↓
 
-                ↓
+Community/module detection
 
-    Network preservation analysis
+            ↓
 
-                ↓
+Disease-state projection
 
-    Ecological deviation scoring
+            ↓
 
-                ↓
+Network preservation evaluation
 
-    Clinical association analysis
+            ↓
 
-------------------------------------------------------------------------
+Ecological deviation quantification
+
+            ↓
+
+Phenotype association analysis
+```
+
+
+Each step is implemented using reproducible computational scripts and can be adapted according to different microbiome datasets and biological questions.
+
+
+---
 
 # Repository Organization
 
-    Healthy-Reference-Microbial-Network-Modeling-Framework/
+```
+Healthy-Reference-Microbial-Network-Modeling-Framework/
 
-    │
-    ├── README.md
-    │
-    ├── scripts/
-    │   ├── network_construction/
-    │   ├── preservation_analysis/
-    │   ├── module_analysis/
-    │   └── visualization/
-    │
-    ├── data/
-    │   └── example_dataset/
-    │
-    ├── results/
-    │   └── example_outputs/
-    │
-    └── environment/
-        └── package_information/
+│
+├── README.md
+│
+├── scripts/
+│   ├── preprocessing/
+│   ├── network_construction/
+│   ├── module_identification/
+│   ├── preservation_analysis/
+│   ├── statistical_analysis/
+│   └── visualization/
+│
+├── data/
+│   └── example_data/
+│
+├── results/
+│   └── output_results/
+│
+└── environment/
+    └── software_information/
+```
 
-------------------------------------------------------------------------
+
+---
 
 # Input Data
 
-## Microbial abundance matrix
+The framework requires microbial abundance profiles and corresponding sample metadata.
+
+The microbial abundance matrix should contain microbial features as rows and samples as columns. Depending on the research design, microbial features can represent different taxonomic levels, including species, genera, or other microbial units.
 
 Example:
 
-  Taxon       Sample1   Sample2   Sample3
-  ----------- --------- --------- ---------
-  Species_A   0.12      0.05      0.08
-  Species_B   0.03      0.11      0.06
+| Microbial feature | Sample 1 | Sample 2 | Sample 3 |
+|---|---|---|---|
+| Species_A | abundance | abundance | abundance |
+| Species_B | abundance | abundance | abundance |
 
-## Sample metadata
 
-Including:
+Sample metadata can include:
 
--   Clinical groups
--   Demographic information
--   Phenotypic measurements
--   Additional biological variables
+- experimental groups;
+- demographic information;
+- clinical characteristics;
+- quantitative phenotypes;
+- additional biological measurements.
 
-------------------------------------------------------------------------
+
+---
 
 # Output
 
-The framework generates:
+The framework generates multiple levels of network-based measurements, including:
 
--   Healthy-reference microbial networks
--   Network topology parameters
--   Module assignments
--   Edge preservation scores
--   Ecological deviation profiles
--   Visualization-ready results
+- healthy-reference microbial networks;
+- microbial interaction structures;
+- network topology parameters;
+- microbial community assignments;
+- preservation metrics;
+- ecological deviation scores;
+- phenotype-associated network features.
 
-------------------------------------------------------------------------
+These outputs provide a quantitative description of how microbial ecosystems differ from a healthy reference organization.
+
+
+---
 
 # Applications
 
-The framework can be applied to:
+Although initially developed for microbiome-based disease research, the framework can be applied broadly to different biological contexts, including:
 
-🧬 Microbiome disease research
+- psychiatric disorders;
+- brain–gut interaction studies;
+- metabolic diseases;
+- inflammatory disorders;
+- longitudinal microbiome studies;
+- multi-omics ecological modeling.
 
-🧠 Brain--gut interaction studies
 
-🦠 Host--microbiome ecological modeling
-
-📈 Disease heterogeneity analysis
-
-🔬 Multi-omics integration
-
-------------------------------------------------------------------------
+---
 
 # Software Requirements
 
-Recommended environment:
+The framework is implemented using R and Python environments.
 
--   R ≥ 4.0
--   Python ≥ 3.8
+Recommended software:
 
-Major packages:
+- R ≥ 4.0
+- Python ≥ 3.8
 
--   FlashWeave
--   igraph
--   WGCNA
--   tidyverse
--   vegan
--   networkx
 
-------------------------------------------------------------------------
+Major computational packages include:
+
+**R packages**
+
+- igraph
+- FlashWeave
+- WGCNA
+- tidyverse
+- vegan
+- ggplot2
+
+
+**Python packages**
+
+- numpy
+- pandas
+- scipy
+- networkx
+
+
+---
 
 # About MiniLab
 
-**MiniLab** focuses on developing computational approaches for
-understanding complex biological systems through microbiome ecology,
-network modeling, and multi-omics integration.
+MiniLab focuses on developing computational approaches for understanding complex biological systems through microbiome ecology, network science, and artificial intelligence.
 
-Our research interests include:
+The research interests of MiniLab include:
 
--   Microbiome ecosystem modeling
--   Brain--gut interactions
--   Disease heterogeneity
--   Artificial intelligence for biomedical discovery
+- microbial ecosystem modeling;
+- microbiome–host interactions;
+- brain–gut axis research;
+- disease heterogeneity;
+- multi-omics integration;
+- computational methods for biomedical discovery.
 
-------------------------------------------------------------------------
+
+MiniLab aims to develop reproducible analytical frameworks that bridge computational modeling and biological interpretation, providing new perspectives for understanding complex diseases.
+
+
+---
+
+# Reproducibility
+
+All scripts are organized to facilitate transparent and reproducible microbiome network analysis.
+
+Researchers can adapt this framework by modifying:
+
+- reference population selection;
+- microbial feature definitions;
+- network inference parameters;
+- statistical evaluation strategies.
+
+The framework is designed to support applications across different cohorts and biological systems.
+
+
+---
 
 # Citation
 
 If you use this framework in your research, please cite:
 
-**Healthy-Reference Microbial Network Modeling Framework for
-Characterizing Ecological Deviations in Disease-associated Microbiome
-Alterations**
+**Healthy-Reference Microbial Network Modeling Framework for Characterizing Ecological Deviations in Microbiome Ecosystems**
 
-------------------------------------------------------------------------
+
+---
 
 # Contact
 
