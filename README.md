@@ -30,6 +30,7 @@ The **Healthy-Reference Microbial Network Modeling Framework** was developed to 
 The framework follows the concept of **normative modeling**, where the ecological structure observed in healthy populations is considered a reference state. Disease-associated microbiomes are subsequently compared against this reference network to quantify deviations in microbial connectivity, module organization, and ecological relationships.
 
 By integrating microbial network construction, community structure analysis, preservation evaluation, and phenotype association, this framework provides a systematic approach for studying microbiome ecosystem alterations across complex diseases.
+<img width="1402" height="1122" alt="image" src="https://github.com/user-attachments/assets/d21d220f-3cde-46a2-adcc-d57b0f9912db" />
 
 
 ---
